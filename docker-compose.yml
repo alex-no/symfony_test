@@ -1,0 +1,17 @@
+# docker-compose.yml
+# version: '3.8'
+
+services:
+  symfony_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: symfony_test
+    working_dir: /var/www
+    ports:
+      - "80:80"
+    volumes:
+      - ./www_app:/var/www
+#      - .:/app
+    working_dir: /app
+    tty: true
