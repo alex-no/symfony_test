@@ -2,6 +2,10 @@
 FROM php:8.2-cli
 
 # Install Composer
+RUN curl -sS https://get.symfony.com/cli/installer | bash \
+    && mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
+    
+# Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Midnight Commander (mc) and any necessary dependencies
