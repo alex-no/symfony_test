@@ -2,3 +2,4 @@
 /www_app/.env
 /www_app/.env.test
 /*.bak
+/bak

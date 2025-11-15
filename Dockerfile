@@ -9,7 +9,9 @@ RUN curl -sS https://get.symfony.com/cli/installer | bash \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Midnight Commander (mc) and any necessary dependencies
-RUN apt-get update && apt-get install -y mc && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y git mc && \
+    rm -rf /var/lib/apt/lists/*
 
 # Specify the default working directory
 WORKDIR /var/www
