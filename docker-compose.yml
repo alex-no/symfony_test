@@ -9,8 +9,9 @@ services:
     container_name: symfony_test
     working_dir: /var/www
     ports:
-      - "80:80"
+      - "8000:8000"
     volumes:
       - ./www_app:/var/www
-#      - .:/app
+#    command: >
+#      sh -c "symfony server:start --no-tls --listen-ip=0.0.0.0 --daemon"
     tty: true
